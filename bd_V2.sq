@@ -1,0 +1,81 @@
+DROP TABLE IF EXISTS remarque;
+DROP TABLE IF EXISTS partie;
+DROP TABLE IF EXISTS audio;
+DROP TABLE IF EXISTS jeu;
+DROP TABLE IF EXISTS fichier;
+DROP TABLE IF EXISTS categorie;
+DROP TABLE IF EXISTS eleve;
+DROP TABLE IF EXISTS professeur;
+DROP TABLE IF EXISTS utilisateur;
+
+CREATE TABLE utilisateur (
+    id SERIAL PRIMARY KEY,
+    prenom VARCHAR(64) NOT NULL,
+    nom VARCHAR(64) NOT NULL,
+    code_connexion VARCHAR(64) NOT NULL
+);
+
+CREATE TABLE eleve (
+    id INTEGER REFERENCES utilisateur (id),
+    prenom VARCHAR(64) NOT NULL REFERENCES utilisateur (prenom),
+    nom VARCHAR(64) NOT NULL REFERENCES utilisateur (nom),
+    code_connexion VARCHAR(64) NOT NULL REFERENCES utilisateur (code_connexion),
+    langue_maternelle VARCHAR(64) NOT NULL,
+    L1 VARCHAR(32) NOT NULL,
+    L2 VARCHAR(32),
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE professeur (
+    id INTEGER REFERENCES utilisateur (id),
+    prenom VARCHAR(64) NOT NULL REFERENCES utilisateur (prenom),
+    nom VARCHAR(64) NOT NULL REFERENCES utilisateur (nom),
+    code_connexion VARCHAR(64) NOT NULL REFERENCES utilisateur (code_connexion),
+    langage VARCHAR(32) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE audio (
+    nom VARCHAR(128) PRIMARY KEY NOT NULL,
+    chemin VARCHAR(64) NOT NULL,
+    temps TIME NOT NULL
+);
+
+CREATE TABLE fichier (
+    nom VARCHAR(64) PRIMARY KEY NOT NULL,
+    chemin VARCHAR(64) NOT NULL
+);
+
+CREATE TABLE categorie (
+    nom VARCHAR(64) PRIMARY KEY NOT NULL
+);
+
+CREATE TABLE jeu (
+    id SERIAL PRIMARY KEY,
+    niveau VARCHAR(16),
+    nom_fichier VARCHAR(64) NOT NULL REFERENCES fichier (nom),
+    categorie VARCHAR(64) NOT NULL REFERENCES categorie (nom)
+);
+
+CREATE TABLE partie (
+    id SERIAL PRIMARY KEY,
+    nom_audio VARCHAR(128) REFERENCES audio (nom),
+    id_eleve INTEGER NOT NULL REFERENCES eleve (id),
+    id_jeu INTEGER NOT NULL REFERENCES jeu (id)
+);
+
+CREATE TABLE remarque (
+    id SERIAL PRIMARY KEY,
+    id_partie INTEGER NOT NULL REFERENCES partie (id),
+    id_prof INTEGER NOT NULL REFERENCES professeur (id),
+    remarque VARCHAR(512) NOT NULL
+);
+
+INSERT INTO categorie VALUES ('lecture');
+INSERT INTO categorie VALUES ('description image');
+
+
+INSERT INTO fichier (nom, chemin) VALUES ('camping.jpg', 'C:\\wamp64\\www\\CODEV33\\camping.jpg');
+
+INSERT INTO jeu (niveau, nom_fichier, categorie) 
+VALUES (NULL, 'camping.jpg', 'description image');
