@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE HTML>  
 <html>
 <head>
@@ -193,7 +196,6 @@ print $password;
 
 <?php
 // Démarrer la session utilisateur
-session_start();
 
 $db = new mysqli('localhost', 'root', '', 'bdv2'); // Remplacez les valeurs de la base de données si nécessaire
 if ($db->connect_errno) {
@@ -233,6 +235,13 @@ if ($user != "") {
   $stmt->execute();
   $resultProfesseur = $stmt->get_result();
   $stmt->close();
+
+    // Créer les variables de session
+$_SESSION['user_id'] = $user['id'];
+$_SESSION['user_name'] = $user['nom'];
+$_SESSION['user_fname'] = $user['prenom'];
+// Rediriger l'utilisateur vers la page de succès ou effectuer d'autres actions nécessaires
+
 
   if ($resultEleve->num_rows > 0) {
     // L'utilisateur est un élève
