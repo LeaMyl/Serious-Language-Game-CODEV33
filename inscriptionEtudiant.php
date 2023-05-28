@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE HTML>  
 <html>
 <head>
@@ -251,8 +254,6 @@ print "<br>";
 ?>
 
 <?php
-
-session_start();
 
 $db = new mysqli('localhost', 'root', '', 'bdv2'); // Remplacez les valeurs de la base de données si nécessaire
 if ($db->connect_errno) {
