@@ -1,3 +1,8 @@
+<?php
+session_start();
+$_SESSION['nom_image'] ='foret';
+$_SESSION['id_jeu'] =3;
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
