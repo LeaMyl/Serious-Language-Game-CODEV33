@@ -76,6 +76,25 @@ INSERT INTO categorie VALUES ('description image');
 
 
 INSERT INTO fichier (nom, chemin) VALUES ('camping.jpg', 'C:\\wamp64\\www\\CODEV33\\camping.jpg');
-
 INSERT INTO jeu (niveau, nom_fichier, categorie) 
 VALUES (NULL, 'camping.jpg', 'description image');
+
+INSERT INTO fichier (nom, chemin) VALUES ('fire.jpg', 'C:\\wamp64\\www\\CODEV33\\camping.jpg');
+INSERT INTO jeu (niveau, nom_fichier, categorie) 
+VALUES (NULL, 'fire.jpg', 'description image');
+
+INSERT INTO fichier (nom, chemin) VALUES ('forest.jpg', 'C:\\wamp64\\www\\CODEV33\\camping.jpg');
+INSERT INTO jeu (niveau, nom_fichier, categorie) 
+VALUES (NULL, 'forest.jpg', 'description image');
+
+INSERT INTO fichier (nom, chemin) VALUES ('imageParcEnfant.jpg', 'C:\\wamp64\\www\\CODEV33\\camping.jpg');
+INSERT INTO jeu (niveau, nom_fichier, categorie) 
+VALUES (NULL, 'imageParcEnfant.jpg', 'description image');
+
+INSERT INTO fichier (nom, chemin) VALUES ('imagePlage.jpg', 'C:\\wamp64\\www\\CODEV33\\camping.jpg');
+INSERT INTO jeu (niveau, nom_fichier, categorie) 
+VALUES (NULL, 'imagePlage.jpg', 'description image');
+
+INSERT INTO fichier (nom, chemin) VALUES ('ParcAttraction.jpg', 'C:\\wamp64\\www\\CODEV33\\camping.jpg');
+INSERT INTO jeu (niveau, nom_fichier, categorie) 
+VALUES (NULL, 'ParcAttraction.jpg', 'description image');
