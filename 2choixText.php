@@ -89,9 +89,9 @@
         <h2>Activity 2 : Read the text</h2>
         <i>Choose the text you would like to read</i>
 
-        <a href="2romeojuliette1.html">Romeo & Juliette, Act I Prologue</a>
-        <a href="2romeojuliette2.html">Romeo & Juliette, Act II Scene 1 (balcony)</a>
-        <a href="2harrypotter1.html">Harry Potter and The Sorcerer's Stone, Chapter 2 "The Vanishing Glass"</a>
+        <a href="2romeojuliette1.php">Romeo & Juliette, Act I Prologue</a>
+        <a href="2romeojuliette2.php">Romeo & Juliette, Act II Scene 1 (balcony)</a>
+        <a href="2harrypotter1.php">Harry Potter and The Sorcerer's Stone, Chapter 2 "The Vanishing Glass"</a>
       </main>
 
       <hr>
