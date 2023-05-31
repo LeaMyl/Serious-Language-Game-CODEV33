@@ -1,3 +1,8 @@
+<?php
+session_start();
+$_SESSION['nom_image'] ='fire';
+$_SESSION['id_jeu'] =2;
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
