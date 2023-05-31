@@ -89,12 +89,12 @@
         <h2>Activity 1 : Describe the image</h2>
         <i>Choose the image you would like to describe</i>
 
-        <a href="1parc.html">Theme 1 : Child Park</a>
-        <a href="1plage.html">Theme 2 : Plage</a>
-        <a href="1foret.html">Theme 3 : Forest</a>
-        <a href="1camping.html">Theme 4 : Camping</a>
-        <a href="1parcAttraction.html">Theme 5 : Amusement Park</a>
-        <a href="1fire.html">Theme 6 : Fire</a>
+        <a href="1parc.php">Theme 1 : Child Park</a>
+        <a href="1plage.php">Theme 2 : Plage</a>
+        <a href="1foret.php">Theme 3 : Forest</a>
+        <a href="1camping.php">Theme 4 : Camping</a>
+        <a href="1parcAttraction.php">Theme 5 : Amusement Park</a>
+        <a href="1fire.php">Theme 6 : Fire</a>
       </main>
 
       <hr>
