@@ -1,3 +1,9 @@
+<?php
+session_start();
+$_SESSION['nom_image'] ='camping';
+$_SESSION['id_jeu'] =1;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
