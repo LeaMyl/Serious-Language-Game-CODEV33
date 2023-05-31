@@ -1,3 +1,8 @@
+<?php
+session_start();
+$_SESSION['nom_image'] ='harrypotter';
+$_SESSION['id_jeu'] =7;
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
