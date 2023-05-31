@@ -1,3 +1,8 @@
+<?php
+session_start();
+$_SESSION['nom_image'] ='ParcEnfant';
+$_SESSION['id_jeu'] =4;
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
