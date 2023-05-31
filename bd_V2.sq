@@ -101,4 +101,12 @@ VALUES (NULL, 'ParcAttraction.jpg', 'description image');
 
 INSERT INTO fichier (nom, chemin) VALUES ('harrypotter.txt', 'C:\\wamp64\\www\\CODEV33\\camping.jpg');
 INSERT INTO jeu (niveau, nom_fichier, categorie) 
-VALUES (NULL, ''harrypotter.txt'', 'lecture');
+VALUES (NULL, 'harrypotter.txt', 'lecture');
+
+INSERT INTO fichier (nom, chemin) VALUES ('RomeoEtJuliette1.txt', 'C:\\wamp64\\www\\CODEV33\\camping.jpg');
+INSERT INTO jeu (niveau, nom_fichier, categorie) 
+VALUES (NULL, 'RomeoEtJuliette1.txt', 'lecture');
+
+INSERT INTO fichier (nom, chemin) VALUES ('RomeoEtJuliette2.txt', 'C:\\wamp64\\www\\CODEV33\\camping.jpg');
+INSERT INTO jeu (niveau, nom_fichier, categorie) 
+VALUES (NULL, 'RomeoEtJuliette2.txt', 'lecture');
