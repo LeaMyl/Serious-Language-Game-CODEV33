@@ -1,13 +1,13 @@
+
 <?php
 session_start();
 // Vérifier si le formulaire a été soumis
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['audio_file'])) {
   // Vérifier si le fichier a été téléchargé sans erreur
   if ($_FILES['audio_file']['error'] == UPLOAD_ERR_OK && is_uploaded_file($_FILES['audio_file']['tmp_name'])) {
-    //$upload_dir = "C:\\wamp64\\www\\CODEV33\\son\\"; // chemin vers le répertoire d'upload
-    $upload_dir = "C:\\wamp64\\www\\html\\";
+    $upload_dir = "C:\\wamp64\\www\\CODEV33\\son\\"; // chemin vers le répertoire d'upload
     $audio_file = $_FILES['audio_file'];
-    $audio_name = $_SESSION['user_name'] . '_' . $_SESSION['user_fname'] . '_camping_' . date('YmdHis') . '.' . pathinfo($audio_file['name'], PATHINFO_EXTENSION);
+    $audio_name = $_SESSION['user_name'] . '_' . $_SESSION['user_fname'] .'_'. $_SESSION['nom_image'] .'_'. date('YmdHis') . '.' . pathinfo($audio_file['name'], PATHINFO_EXTENSION);
     $audio_path = $upload_dir . $audio_name;
     // Déplacer le fichier téléchargé vers le répertoire d'upload
     if (move_uploaded_file($audio_file['tmp_name'], $audio_path)) {
@@ -30,8 +30,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['audio_file'])) {
     
       
       // Insérer la partie dans la table "partie"
-      $stmt = $db->prepare("INSERT INTO partie (id, nom_audio, id_eleve, id_jeu) VALUES (DEFAULT, ?, ?, 1)");
-      $stmt->bind_param('si', $audio_name, $_SESSION['user_id']);
+      $stmt = $db->prepare("INSERT INTO partie (id, nom_audio, id_eleve, id_jeu) VALUES (DEFAULT, ?, ?, ?)");
+      $stmt->bind_param('sii', $audio_name, $_SESSION['user_id'],$_SESSION['id_jeu']);
       $stmt->execute();
       $stmt->close();
       
