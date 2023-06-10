@@ -141,7 +141,7 @@ if ($result) {
           $partieId = $row['partie_id'];
 
           echo "<tr>
-                  <td><a href=\"C:/wamp64/www/html/$audioNom.wav\">$audioNom</a></td>
+                  <td><a href=\"C:/wamp64/www/html/$audioNom\">$audioNom</a></td>
               </tr>
               <tr>
                   <td>";
